@@ -1,6 +1,7 @@
 package com.example.javamavenjunithelloworld;
 
 import org.junit.Test;
+import org.junit.Ignore;
 
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
@@ -15,7 +16,7 @@ import static org.junit.Assert.*;
  * A unit test aims to test all code and code paths of a specific class.
  */
 public class HelloTest {
-
+    @Ignore
     @Test
     public void testSayHello() {
         OutputStream os = new ByteArrayOutputStream();
@@ -33,7 +34,7 @@ public class HelloTest {
         PrintStream stream = new PrintStream(os, true);
 
         Hello hi = new Hello();
-        hi.setTimes(3);
+        hi.setTimes(4);
         hi.sayHello(stream);
 
         // Does it say "Hello!" three times?
